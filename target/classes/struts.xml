@@ -111,5 +111,18 @@
 			<result name="logout" type= "redirect">/admin/</result>
 		</action>
 		
+								<!-- Manage Theater -->
+								
+		<action name="managetheaters" class="com.zen.demoproject.ManageTheaterAction" method="getManagePage"> 
+			<result name="manage">/admin/manage_theater.jsp</result>
+		</action>
+		
+		<action name="addcity" class="com.zen.demoproject.AddCityAction" method="getCityPage"> 
+			<result name="citypage">/admin/add_city.jsp</result>
+		</action>
+		
+		<action name="addsuccessfully" class="com.zen.demoproject.AddCityAction" method="addCity"> 
+			<result name="addcity" type="redirect">/admin/managetheaters</result>
+		</action>
 	</package>
 </struts>

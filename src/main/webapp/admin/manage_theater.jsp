@@ -38,6 +38,10 @@ text-align : center;
   background-color: #4CAF50;
   color: white;
 }
+
+a{
+	color : #945FB4;
+}
 </style>
 <body>
 	<%@ include file = "navigator.jsp" %> <br>
@@ -51,7 +55,27 @@ text-align : center;
 	<table id="table_id">
 		
 		<tr>
-			<td><h4><a href="${pageContext.request.contextPath}/admin/managetheaters">MANAGE THEATERS</a></h4></td>
+			<td><h4><a href="${pageContext.request.contextPath }/admin/addcity">ADD CITY</a></h4></td>
+		</tr>
+		
+		<tr>
+			<td><h4><a href="${pageContext.request.contextPath }/admin/addtheater">ADD THEATER</a></h4></td>
+		</tr>
+		
+		<tr>
+			<td><h4><a href="${pageContext.request.contextPath }/admin/addmovies">ADD MOVIES</a></h4></td>
+		</tr>
+		
+		<tr>
+			<td><h4><a href="/admin/addmoviedates">ADD MOVIE DATES</a></h4></td>
+		</tr>
+		
+		<tr>
+			<td><h4><a href="/admin/addtimings/">ADD MOVIE TIMINGS</a></h4></td>
+		</tr>
+		
+		<tr>
+			<td><h4><a href="/admin/addtimings/">. . .GO BACK. . .</a></h4></td>
 		</tr>
 		
 	</table>

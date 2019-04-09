@@ -16,10 +16,15 @@
         <property name="hbm2ddl.auto">update</property>
         
         
-       				<!-- HIBERNATE MAPPING CLASS -->
-       				
-        <mapping class="com.zen.beans.admin.Admin" />
+       				<!-- HIBERNATE MAPPING CLASS- User Section -->
+        
         <mapping class="com.zen.beans.user.UserData" />
+        
+      				<!-- HIBERNATE MAPPING CLASS- Admin Section -->
+      				
+      	<mapping class="com.zen.beans.admin.Admin" />
+      	<mapping class="com.zen.beans.admin.CustomIdTable" />
+      	<mapping class="com.zen.beans.admin.City" />
         
     </session-factory>
 </hibernate-configuration>
