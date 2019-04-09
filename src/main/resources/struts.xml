@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- https://struts.apache.org/docs/struts-defaultxml.html -->
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+<constant name="struts.devMode" value="true" />
+	<package name="default" namespace="/"  extends="struts-default">
+	
+								<!-- Home Page Action --> 
+	
+		<action name="" class="com.zen.demoproject.HomeAction" method="demohome">
+			<result name="homeview">/home.jsp</result>
+		</action>
+		
+								<!-- Registration Action -->
+		
+		<action name="registration" class="com.zen.demoproject.RegisterUserAction" method="getRegistrationPage">
+			<result name="register">/registration.jsp</result>
+		</action>
+		
+		<action name="registrationSuccessful" class="com.zen.demoproject.RegisterUserAction" method="registerUser">
+			<result name="registerSuccess" type="redirect">/selection </result>
+		</action>
+		
+								<!-- Login Action -->
+		
+		<action name="login" class="com.zen.demoproject.UserLoginAction" method="userLogin">
+			<result name="success" type="redirect">/selection</result>
+			<result name="fail" type="redirect">/</result>
+		</action>
+		
+								<!-- Logout Action -->
+		
+		<action name="logout" class="com.zen.demoproject.UserLogoutAction" method="userLogout">
+			<result name="logout" type="redirect">/</result>
+		</action>
+								<!-- Edit Profile Action -->
+								
+		<action name="editprofile" class="com.zen.demoproject.EditUserAction" method="getEditUserPage">
+			<result name="editpage">/edit_user.jsp</result>
+		</action>
+		
+		<action name="editsuccessful" class="com.zen.demoproject.EditUserAction" method="updateDetails">
+			<result name="updated" type="redirect">/profile</result>
+		</action>
+		
+								<!-- View profile Action -->
+								
+		<action name="profile" class="com.zen.demoproject.ViewUserAction" method="getViewUserPage">
+			<result name="viewpage">/view_user.jsp</result>
+		</action>
+		
+		<action name="gotohome" class="com.zen.demoproject.ViewUserAction" method="goToHome">
+			<result name="gotohome" type="redirect">/selection</result>
+		</action>
+		
+								<!-- Select Info -->
+								
+		<action name="selection" class="com.zen.demoproject.SelectInfoAction" method="selectInfo">
+			<result name="selection_page">/selection.jsp</result>
+		</action>
+		
+								<!-- Select seat -->
+									
+		<action name="selectSeat" class="com.zen.demoproject.SelectSeatAction" method="getSeat">
+			<result name="seat">/seat.jsp</result>
+		</action>
+					
+								<!-- Booking successful -->		
+		<action name="successful" class="com.zen.demoproject.BookingSuccessAction" method="successfulBooking">
+			<result name="success">/success.jsp</result>
+		</action>		
+	</package>
+	
+<!--********************************* Admin Section ********************************************-->
+	
+	<package name="administration" namespace="/admin" extends="struts-default">
+		
+								<!-- Admin Login -->
+								
+		<action name="" class="com.zen.demoproject.AdminLoginAction" method="getLoginPage">
+			<result name="login">/admin/admin_login.jsp</result>
+		</action>
+		
+		<action name="login" class="com.zen.demoproject.AdminLoginAction" method="adminLogin">
+			<result name="success" type="redirect">/admin/home</result>
+			<result name="fail" type="redirect">/admin/</result>
+		</action>
+		
+								<!-- Admin Home -->
+								
+		<action name="home" class="com.zen.demoproject.AdminHomeAction" method="adminHome">
+			<result name="home">/admin/admin_home.jsp</result>
+		</action>
+				
+				
+								<!-- Admin Profile -->
+								
+		<action name="profile" class="com.zen.demoproject.AdminProfileAction" method="getAdminProfile">
+			<result name="profile">/admin/view_admin.jsp</result>
+		</action>
+		
+		<action name="gotohome" class="com.zen.demoproject.AdminProfileAction" method="goBack">
+			<result name="home" type= "redirect">/admin/home</result>
+		</action>
+					
+								<!-- Admin Logout -->
+								
+		<action name="logout" class="com.zen.demoproject.AdminLogoutAction" method="adminLogout">
+			<result name="logout" type= "redirect">/admin/</result>
+		</action>
+		
+	</package>
+</struts>
