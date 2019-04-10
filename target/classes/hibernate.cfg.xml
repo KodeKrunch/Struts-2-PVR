@@ -25,6 +25,10 @@
       	<mapping class="com.zen.beans.admin.Admin" />
       	<mapping class="com.zen.beans.admin.CustomIdTable" />
       	<mapping class="com.zen.beans.admin.City" />
+      	<mapping class="com.zen.beans.admin.Theater" />
+      	<mapping class="com.zen.beans.admin.Movie" />
+      	<mapping class="com.zen.beans.admin.MovieDate" />
+      	<mapping class="com.zen.beans.admin.Timing" />
         
     </session-factory>
 </hibernate-configuration>

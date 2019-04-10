@@ -63,11 +63,11 @@ a{
 		</tr>
 		
 		<tr>
-			<td><h4><a href="${pageContext.request.contextPath }/admin/addmovies">ADD MOVIES</a></h4></td>
+			<td><h4><a href="${pageContext.request.contextPath }/admin/selectcityformovie">ADD MOVIES</a></h4></td>
 		</tr>
 		
 		<tr>
-			<td><h4><a href="/admin/addmoviedates">ADD MOVIE DATES</a></h4></td>
+			<td><h4><a href="${pageContext.request.contextPath }/admin/addmoviedates">ADD MOVIE DATES</a></h4></td>
 		</tr>
 		
 		<tr>

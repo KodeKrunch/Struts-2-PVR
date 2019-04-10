@@ -124,5 +124,40 @@
 		<action name="addsuccessfully" class="com.zen.demoproject.AddCityAction" method="addCity"> 
 			<result name="addcity" type="redirect">/admin/managetheaters</result>
 		</action>
+		
+								<!-- Add Theater -->
+		<action name="addtheater" class="com.zen.demoproject.AddTheaterAction" method="getTheaterPage"> 
+			<result name="theaterpage">/admin/add_theater.jsp</result>
+		</action>
+		
+		<action name="addsuccessfully" class="com.zen.demoproject.AddTheaterAction" method="addTheater"> 
+			<result name="success" type="redirect">/admin/managetheaters</result>
+		</action>
+		
+								<!-- Add Movies -->
+		<action name="selectcityformovie" class="com.zen.demoproject.AddMovieAction" method="getCityForMovie"> 
+			<result name="citypage">/admin/add_movie_city.jsp</result>
+		</action>		
+		
+		<action name="selecttheaterformovie" class="com.zen.demoproject.AddMovieAction" method="getTheaterForMovie"> 
+			<result name="theaterpage">/admin/add_movie_theater.jsp</result>
+		</action>	
+		
+		<action name="addmoviedetails" class="com.zen.demoproject.AddMovieAction" method="getMovieAddPage"> 
+			<result name="moviepage">/admin/add_movie.jsp</result>
+		</action>
+		
+		<action name="addsuccessfully" class="com.zen.demoproject.AddMovieAction" method="addMovie"> 
+			<result name="success" type="redirect">/admin/managetheaters</result>
+		</action>			
+		
+								<!-- Add Moviedates -->
+		
+		<action name="addmoviedates" class="com.zen.demoproject.AddMovieDateAction" method="getDatePage"> 
+			<result name="datepage">/admin/add_moviedates.jsp</result>
+		</action>			
+		
+								
+		
 	</package>
 </struts>
