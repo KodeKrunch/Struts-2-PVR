@@ -75,7 +75,7 @@
 	
 <!--********************************* Admin Section ********************************************-->
 	
-	<package name="administration" namespace="/admin" extends="struts-default">
+	<package name="administration" namespace="/admin"  extends="json-default">
 		
 								<!-- Admin Login -->
 								
@@ -157,7 +157,9 @@
 			<result name="datepage">/admin/add_moviedates.jsp</result>
 		</action>			
 		
-								
+		<!-- <action name="PopulateTheater" class="com.zen.demoproject.GetTheaterForDates"> 
+			<result name="theaterlist" type="json">/admin/add_moviedates.jsp</result>
+		</action>	 -->
 		
 	</package>
 </struts>

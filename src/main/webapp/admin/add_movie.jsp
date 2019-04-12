@@ -47,6 +47,7 @@ a{
 				<tr><td><s:textfield key = "Director" name = "movieDirector"/><br></td></tr>
 				<tr><td><s:textfield key = "Cast" name = "movieCast"/><br></td></tr>
 				<tr><td><s:textarea label="Description" name="movieDescription" cols="40" rows="10"/><br></td></tr>
+				<tr><td><s:textfield key = "Duration" name = "movieDuration"/><br></td></tr>
 				<tr><td><input type="submit" value="Add"/></td></tr>
 			</table>
 	</form>
